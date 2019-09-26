@@ -1,0 +1,14 @@
+D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\bin\Debug\netcoreapp2.1\win10-x64\hostpolicy.dll
+D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\bin\Debug\netcoreapp2.1\win10-x64\hostfxr.dll
+D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\bin\Debug\netcoreapp2.1\win10-x64\TextAdventure.exe
+D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\bin\Debug\netcoreapp2.1\win10-x64\TextAdventure.deps.json
+D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\bin\Debug\netcoreapp2.1\win10-x64\TextAdventure.runtimeconfig.json
+D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\bin\Debug\netcoreapp2.1\win10-x64\TextAdventure.runtimeconfig.dev.json
+D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\bin\Debug\netcoreapp2.1\win10-x64\TextAdventure.dll
+D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\bin\Debug\netcoreapp2.1\win10-x64\TextAdventure.pdb
+D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\obj\Debug\netcoreapp2.1\win10-x64\TextAdventure.csprojAssemblyReference.cache
+D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\obj\Debug\netcoreapp2.1\win10-x64\TextAdventure.csproj.CoreCompileInputs.cache
+D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\obj\Debug\netcoreapp2.1\win10-x64\TextAdventure.AssemblyInfoInputs.cache
+D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\obj\Debug\netcoreapp2.1\win10-x64\TextAdventure.AssemblyInfo.cs
+D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\obj\Debug\netcoreapp2.1\win10-x64\TextAdventure.dll
+D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\obj\Debug\netcoreapp2.1\win10-x64\TextAdventure.pdb

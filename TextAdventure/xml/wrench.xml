@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- A example Xml file for a Item -->
+<Room>
+  <!-- ItemID 4 characters, type name e.g. Item, Wrench -> iwre
+  all IDs are turned into 8 character IDs ModID + Object ID  losp:iwre-->
+  <ID>iwre</ID>
+  
+  <Name>wrench</Name>
+
+  <!--ItemTypes 
+  stationary (can't be picked up, stays in room, 
+  pickup (can be put in inventory), 
+  equiptment (can be put in inventory and equipted, e.g. a gun)
+  -->
+  
+  <ItemType>pickup</ItemType>
+  
+  <ItemDescription>
+    a helpful tool
+  </ItemDescription>
+
+</Room>

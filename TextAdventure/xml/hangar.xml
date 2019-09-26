@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!-- A example Xml file for a Room -->
+<Room>
+  <!-- ID 4 characters, type name e.g. Room, Hangar -> rhan
+  all IDs are turned into 8 character IDs ModID + Object ID  losp:rhan-->
+  <ID>rhan</ID>
+  
+	<Name>hangar</Name>
+	
+	<RoomDescription>
+		apart from the small ship you arrived in, the hangar is empty
+	</RoomDescription>
+	
+	<Exits>
+		<Exit>
+      <RoomID>rsth</RoomID>
+			<Name>southhall a</Name>
+			<Direction>north</Direction>
+			<Description>
+				to the north there is a large door that will lead into the space station. (type 'go north' to move here)")
+			</Description>
+		</Exit>
+	</Exits>
+	
+	<Items>
+		<Item>
+      <ItemID>0</ItemID>
+      <ItemDescription>A wrench lays on the hangar floor. (type 'take wrench' to pick it up)</ItemDescription>
+    </Item>
+	</Items>
+	
+</Room>
