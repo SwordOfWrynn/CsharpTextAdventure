@@ -7,9 +7,9 @@
   
 	<Name>hangar</Name>
 	
-	<RoomDescription>
+	<Description>
 		apart from the small ship you arrived in, the hangar is empty
-	</RoomDescription>
+	</Description>
 	
 	<Exits>
 		<Exit>
@@ -24,8 +24,9 @@
 	
 	<Items>
 		<Item>
-      <ItemID>0</ItemID>
-      <ItemDescription>A wrench lays on the hangar floor. (type 'take wrench' to pick it up)</ItemDescription>
+      <ItemID>iwre</ItemID>
+      <Name>wrench</Name>
+      <Description>A wrench lays on the hangar floor. (type 'take wrench' to pick it up)</Description>
     </Item>
 	</Items>
 	

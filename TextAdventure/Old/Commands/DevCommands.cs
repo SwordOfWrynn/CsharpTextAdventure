@@ -20,7 +20,7 @@ namespace TextAdventure.Commands
         }
         public static string GetCurrentRoom()
         {
-            return GameController.Instance.roomNavigation.CurrentRoom.RoomName;
+            throw new NotImplementedException();
         }
         public static string Num(int num)
         {

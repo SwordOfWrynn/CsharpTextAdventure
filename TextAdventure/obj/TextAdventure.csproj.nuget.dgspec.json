@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ComputerScience\\C#Projects\\PracticeC-SharpProjects\\TextAdventure\\TextAdventure\\TextAdventure.csproj": {}
+    "D:\\ComputerScience\\C#Projects\\CsharpTextAdventure\\TextAdventure\\TextAdventure.csproj": {}
   },
   "projects": {
-    "D:\\ComputerScience\\C#Projects\\PracticeC-SharpProjects\\TextAdventure\\TextAdventure\\TextAdventure.csproj": {
+    "D:\\ComputerScience\\C#Projects\\CsharpTextAdventure\\TextAdventure\\TextAdventure.csproj": {
       "version": "0.1.3",
       "restore": {
-        "projectUniqueName": "D:\\ComputerScience\\C#Projects\\PracticeC-SharpProjects\\TextAdventure\\TextAdventure\\TextAdventure.csproj",
+        "projectUniqueName": "D:\\ComputerScience\\C#Projects\\CsharpTextAdventure\\TextAdventure\\TextAdventure.csproj",
         "projectName": "TextAdventure",
-        "projectPath": "D:\\ComputerScience\\C#Projects\\PracticeC-SharpProjects\\TextAdventure\\TextAdventure\\TextAdventure.csproj",
+        "projectPath": "D:\\ComputerScience\\C#Projects\\CsharpTextAdventure\\TextAdventure\\TextAdventure.csproj",
         "packagesPath": "C:\\Users\\bubba\\.nuget\\packages\\",
-        "outputPath": "D:\\ComputerScience\\C#Projects\\PracticeC-SharpProjects\\TextAdventure\\TextAdventure\\obj\\",
+        "outputPath": "D:\\ComputerScience\\C#Projects\\CsharpTextAdventure\\TextAdventure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

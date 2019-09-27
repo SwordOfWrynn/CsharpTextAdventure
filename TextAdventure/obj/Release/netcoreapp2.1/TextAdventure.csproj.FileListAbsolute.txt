@@ -9,3 +9,13 @@ D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventur
 D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\obj\Release\netcoreapp2.1\TextAdventure.AssemblyInfo.cs
 D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\obj\Release\netcoreapp2.1\TextAdventure.dll
 D:\ComputerScience\C#Projects\PracticeC-SharpProjects\TextAdventure\TextAdventure\obj\Release\netcoreapp2.1\TextAdventure.pdb
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\obj\Release\netcoreapp2.1\TextAdventure.csprojAssemblyReference.cache
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\obj\Release\netcoreapp2.1\TextAdventure.AssemblyInfoInputs.cache
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\obj\Release\netcoreapp2.1\TextAdventure.AssemblyInfo.cs
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\obj\Release\netcoreapp2.1\TextAdventure.dll
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\obj\Release\netcoreapp2.1\TextAdventure.pdb
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Release\netcoreapp2.1\TextAdventure.deps.json
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Release\netcoreapp2.1\TextAdventure.runtimeconfig.json
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Release\netcoreapp2.1\TextAdventure.runtimeconfig.dev.json
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Release\netcoreapp2.1\TextAdventure.dll
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Release\netcoreapp2.1\TextAdventure.pdb

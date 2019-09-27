@@ -1,22 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace TextAdventure
 {
-    public abstract class Item
+    class Item
     {
-        public abstract string PickupNoun { get; }
+        public readonly string ID;
 
-        public abstract string ItemName { get; }
+        public readonly string Name;
 
-        public abstract string ItemRoomDescription { get; }
-    }
+        string m_Description;
+        public string Description { get { return m_Description; } }
 
-    public class Wrench : Item
-    {
-        public override string ItemName => "Wrench";
-
-        public override string PickupNoun => "Wrench";
-
-        public override string ItemRoomDescription => "A wrench lays on the hangar floor. (type 'take wrench' to pick it up)";
+        public Item(string itemID, string name, string desc)
+        {
+            ID = itemID;
+            Name = name;
+            m_Description = desc;
+        }
     }
 }

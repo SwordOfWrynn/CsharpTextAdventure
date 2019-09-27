@@ -36,20 +36,42 @@ namespace TextAdventure
          /_/                        ";
         #endregion
 
-        static Dictionary<int, Room> roomDictionary;
-        static Dictionary<int, Item> itemDictionary;
+        static Dictionary<string, Room> roomDictionary;
+        static Dictionary<string, Item> itemDictionary;
         //static Dictionary<int, Entity> entityDictionary;
 
         public static void PrepareGame()
         {
             Console.WriteLine("Preparing Game...");
+            Console.WriteLine(gameTitle);
 
-            StartGame();
+            Console.WriteLine("\n[1] New Game \n");
+            Console.WriteLine("[2] Load Game \n");
+            Console.WriteLine("[3] Exit Game \n");
+
+            Console.WriteLine("Choose an option...");
+
+            int choice;
+            while (int.TryParse(Console.ReadLine(), out choice) == false || (choice < 1 || choice > 3))
+            {
+                Console.WriteLine("invalid input. type 1, 2 or 3 and hit enter");
+            }
+            switch (choice)
+            {
+                case 1:
+                    StartGame();
+                    break;
+                case 2:
+                    throw new NotImplementedException();
+                    break;
+                case 3:
+                    throw new NotImplementedException();
+                    break;
+            }
         }
 
         static void StartGame()
         {
-            Console.WriteLine("Starting Game...");
             Console.Clear();
             Console.WriteLine(gameTitle);
 
@@ -102,7 +124,7 @@ namespace TextAdventure
             score += num;
         }
 
-        const string READ_PROMPT = "\n";
+        const string READ_PROMPT = "\n >";
         public static string ReadFromConsole(string _promptMessage = " ")
         {
             //display a prompt, and read input
@@ -276,6 +298,18 @@ namespace TextAdventure
         public static void Restart()
         {
             throw new NotImplementedException();
+        }
+
+        public static void AddRoom(Room room)
+        {
+            if (roomDictionary.ContainsKey(room.ID))
+            {
+                roomDictionary[room.ID] = room;
+            }
+            else
+            {
+                roomDictionary.Add(room.ID, room);
+            }
         }
 
     }
