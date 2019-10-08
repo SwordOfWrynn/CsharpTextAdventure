@@ -1,0 +1,13 @@
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Release\netcoreapp2.1\win-x86\hostpolicy.dll
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Release\netcoreapp2.1\win-x86\hostfxr.dll
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Release\netcoreapp2.1\win-x86\TextAdventure.exe
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Release\netcoreapp2.1\win-x86\TextAdventure.deps.json
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Release\netcoreapp2.1\win-x86\TextAdventure.runtimeconfig.json
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Release\netcoreapp2.1\win-x86\TextAdventure.runtimeconfig.dev.json
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Release\netcoreapp2.1\win-x86\TextAdventure.dll
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Release\netcoreapp2.1\win-x86\TextAdventure.pdb
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\obj\Release\netcoreapp2.1\win-x86\TextAdventure.csprojAssemblyReference.cache
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\obj\Release\netcoreapp2.1\win-x86\TextAdventure.AssemblyInfoInputs.cache
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\obj\Release\netcoreapp2.1\win-x86\TextAdventure.AssemblyInfo.cs
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\obj\Release\netcoreapp2.1\win-x86\TextAdventure.dll
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\obj\Release\netcoreapp2.1\win-x86\TextAdventure.pdb

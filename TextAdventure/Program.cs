@@ -32,6 +32,7 @@ namespace TextAdventure
             Console.Title = "Text Adventure";
 
             Console.WriteLine("Starting Console...");
+
             Console.WriteLine("App version {0}", Assembly.GetExecutingAssembly().GetName().Version.ToString());
             try
             {
@@ -39,14 +40,19 @@ namespace TextAdventure
             }
             catch(Exception ex)
             {
+                ErrorReporter.Instance.Report("Exception caught in main!");
+                ErrorReporter.Instance.Report(ex);
                 Console.WriteLine("An exception was unhandled");
                 Console.WriteLine(string.Format("Exception of type {0}", ex.GetType().Name));
                 Console.WriteLine("Exception Message: {0}", ex.Message);
                 Console.WriteLine("Exception stack trace: \n{0}", ex.StackTrace);
+                Console.WriteLine("Error Report Generated");
+                ErrorReporter.Instance.OutputReport();
                 Console.WriteLine("Hit any key to terminate the console");
             }
             Console.Read();
         }
+
     }
 
 }

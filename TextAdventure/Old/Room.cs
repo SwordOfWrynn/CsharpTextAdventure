@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Text;
 using TextAdventure;
-using TextAdventure.Rooms;
+using TextAdventure.Old.Rooms;
 
-namespace TextAdventure
+namespace TextAdventure.Old
 {
     public class Exit
     {

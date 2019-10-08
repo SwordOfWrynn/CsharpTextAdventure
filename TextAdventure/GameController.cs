@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -9,6 +10,7 @@ namespace TextAdventure
 {
     public static class GameController
     {
+        const string XML_FILE_LOC = @"\xml";
 
         public static int moves;
         public static int score;
@@ -36,13 +38,16 @@ namespace TextAdventure
          /_/                        ";
         #endregion
 
-        static Dictionary<string, Room> roomDictionary;
-        static Dictionary<string, Item> itemDictionary;
+        static Dictionary<string, Room> roomDictionary = new Dictionary<string, Room>();
+        static Dictionary<string, Item> itemDictionary = new Dictionary<string, Item>();
         //static Dictionary<int, Entity> entityDictionary;
 
         public static void PrepareGame()
         {
             Console.WriteLine("Preparing Game...");
+
+            LoadXmlFiles(Environment.CurrentDirectory + XML_FILE_LOC);
+
             Console.WriteLine(gameTitle);
 
             Console.WriteLine("\n[1] New Game \n");
@@ -118,6 +123,7 @@ namespace TextAdventure
         {
             if (num < 0)
             {
+                ErrorReporter.Instance.Report("Error - IncreaseScore has been passed a negative value!");
                 throw new Exception("IncreaseScore cannot be passed a negative value");
             }
 
@@ -132,6 +138,53 @@ namespace TextAdventure
             return Console.ReadLine().ToLower();
         }
 
+        public static void Restart()
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void AddRoom(Room room)
+        {
+            if (roomDictionary.ContainsKey(room.ID))
+            {
+                roomDictionary[room.ID] = room;
+            }
+            else
+            {
+                roomDictionary.Add(room.ID, room);
+            }
+        }
+
+        public static void AddItem(Item item)
+        {
+            if (itemDictionary.ContainsKey(item.ID))
+            {
+                itemDictionary[item.ID] = item;
+            }
+            else
+            {
+                itemDictionary.Add(item.ID, item);
+            }
+        }
+
+        static void LoadXmlFiles(string path)
+        {
+            if(Directory.Exists(path) == false)
+            {
+                Console.WriteLine("error - attempted to load xml files at invalid directory");
+                ErrorReporter.Instance.Report("Error - Attempted to load xml files at invalid directory");
+            }
+
+            foreach(string file in Directory.EnumerateFiles(path, "*.xml"))
+            {
+                Console.WriteLine("Loading " + file);
+                XmlObjectLoader xmlLoader = new XmlObjectLoader(Path.Combine(path, file));
+            }
+            foreach(var dir in Directory.EnumerateDirectories(path))
+            {
+                LoadXmlFiles(path+dir);
+            }
+        }
 
         static object CoerceArgument(Type requiredType, string inputValue)
         {
@@ -293,23 +346,6 @@ namespace TextAdventure
                     throw new ArgumentException(exceptionMessage);
             }
             return result;
-        }
-
-        public static void Restart()
-        {
-            throw new NotImplementedException();
-        }
-
-        public static void AddRoom(Room room)
-        {
-            if (roomDictionary.ContainsKey(room.ID))
-            {
-                roomDictionary[room.ID] = room;
-            }
-            else
-            {
-                roomDictionary.Add(room.ID, room);
-            }
         }
 
     }

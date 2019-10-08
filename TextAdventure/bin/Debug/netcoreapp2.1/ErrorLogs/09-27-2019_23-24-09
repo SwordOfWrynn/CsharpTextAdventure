@@ -1,0 +1,15 @@
+
+               Error Log 
+               generated on $Friday, September 27, 2019
+            
+
+Exception Type: NotImplementedException
+The method or operation is not implemented.
+StackTrace:
+   at TextAdventure.XmlObjectLoader.LoadItemXml() in D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\XmlObjectLoader.cs:line 117
+   at TextAdventure.XmlObjectLoader.LoadXML(XElement xmlObject) in D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\XmlObjectLoader.cs:line 37
+   at TextAdventure.XmlObjectLoader..ctor(String path) in D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\XmlObjectLoader.cs:line 23
+   at TextAdventure.GameController.LoadXmlFiles(String path) in D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\GameController.cs:line 166
+   at TextAdventure.GameController.PrepareGame() in D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\GameController.cs:line 49
+   at TextAdventure.Program.Main() in D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\Program.cs:line 39
+

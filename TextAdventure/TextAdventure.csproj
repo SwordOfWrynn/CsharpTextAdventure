@@ -9,6 +9,20 @@
     <PackageReleaseNotes>Early Version</PackageReleaseNotes>
     <ApplicationIcon />
     <StartupObject />
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="xml\hangar.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="xml\wrench.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="mkdir &quot;$(TargetDir)\xml&quot;&#xD;&#xA;XCOPY &quot;$(SolutionDir)TextAdventure\xml&quot; &quot;$(TargetDir)\xml&quot; /s /y" />
+  </Target>
 
 </Project>

@@ -13,23 +13,32 @@ namespace TextAdventure
         private XmlType m_Type;
         public XmlType type { get { return m_Type; } }
 
+        public XmlObjectLoader(XElement xmlObject)
+        {
+            LoadXML(xmlObject);
+        }
+
         public XmlObjectLoader(string path)
         {
-            XElement xmlFile = XElement.Load(path);
+            LoadXML(XElement.Load(path));
+        }
 
-            switch (xmlFile.Name.ToString())
+        void LoadXML(XElement xmlObject)
+        {
+
+            switch (xmlObject.Name.ToString())
             {
                 case "Room":
                     m_Type = XmlType.Room;
-                    LoadRoomXml(xmlFile);
+                    LoadRoomXml(xmlObject);
                     break;
                 case "Item":
                     m_Type = XmlType.Item;
-                    LoadItemXml();
+                    LoadItemXml(xmlObject);
                     break;
                 case "Entity":
                     m_Type = XmlType.Entity;
-                    LoadEntityXml();
+                    LoadEntityXml(xmlObject);
                     break;
                 default:
                     Console.WriteLine("Error - XmlObject: Unregonized xml type");
@@ -37,26 +46,26 @@ namespace TextAdventure
             }
         }
 
-        void LoadRoomXml(XElement xmlFile)
+        void LoadRoomXml(XElement xmlRoom)
         {
-            string roomID = xmlFile.Element("ID").Value;
-            string roomName = xmlFile.Element("Name").Value;
-            string roomDescription = xmlFile.Element("Description").Value;
+            string roomID = xmlRoom.Element("ID").Value;
+            string roomName = xmlRoom.Element("Name").Value;
+            string roomDescription = xmlRoom.Element("Description").Value;
 
-            RoomExit[] roomExits = GetRoomExitsXML(xmlFile);
+            RoomExit[] roomExits = GetRoomExitsXML(xmlRoom);
 
-            RoomItem[] roomItems = GetRoomItemsXML(xmlFile);
+            RoomItem[] roomItems = GetItemsXML(xmlRoom);
 
             Room newRoom = new Room(roomID, roomName, roomDescription, roomExits, roomItems);
 
             GameController.AddRoom(newRoom);
         }
 
-        RoomExit[] GetRoomExitsXML(XElement xmlFile)
+        RoomExit[] GetRoomExitsXML(XElement xmlObject)
         {
             //Create a LINQ query to find the Exits element, then get its children ordered by name
             var exitQuery =
-                from element in xmlFile.Elements()
+                from element in xmlObject.Elements()
                 where element.Name == "Exits"
                 from exit in element.Elements()
                 orderby exit.Name.ToString()
@@ -78,11 +87,11 @@ namespace TextAdventure
             return roomExits.ToArray();
         }
 
-        RoomItem[] GetRoomItemsXML(XElement xmlFile)
+        RoomItem[] GetItemsXML(XElement xmlObject)
         {
             //Create a LINQ query to find the Items element, then get its children ordered by name
             var itemQuery =
-                from element in xmlFile.Elements()
+                from element in xmlObject.Elements()
                 where element.Name == "Items"
                 from item in element.Elements()
                 orderby item.Name.ToString()
@@ -103,12 +112,19 @@ namespace TextAdventure
             return roomItems.ToArray();
         }
 
-        void LoadItemXml()
+        void LoadItemXml(XElement xmlItem)
         {
-            throw new NotImplementedException();
+            string itemID = xmlItem.Element("ID").Value;
+            string itemName = xmlItem.Element("Name").Value;
+            string itemType = xmlItem.Element("ItemType").Value;
+            string itemDesc = xmlItem.Element("Description").Value;
+
+            Item newItem = new Item(itemID, itemName, itemType, itemDesc);
+
+            GameController.AddItem(newItem);
         }
 
-        void LoadEntityXml()
+        void LoadEntityXml(XElement xmlEntity)
         {
             throw new NotImplementedException();
         }
