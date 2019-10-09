@@ -48,9 +48,9 @@ namespace TextAdventure
 
         void LoadRoomXml(XElement xmlRoom)
         {
-            string roomID = xmlRoom.Element("ID").Value;
-            string roomName = xmlRoom.Element("Name").Value;
-            string roomDescription = xmlRoom.Element("Description").Value;
+            string roomID = xmlRoom.Element("ID").Value.Trim();
+            string roomName = xmlRoom.Element("Name").Value.Trim();
+            string roomDescription = xmlRoom.Element("Description").Value.Trim();
 
             RoomExit[] roomExits = GetRoomExitsXML(xmlRoom);
 
@@ -75,10 +75,10 @@ namespace TextAdventure
             //Iterate over the query for the results
             foreach (var exit in exitQuery)
             {
-                string exitID = exit.Element("RoomID").Value;
-                string exitName = exit.Element("Name").Value;
-                string exitDirection = exit.Element("Direction").Value;
-                string exitDesc = exit.Element("Description").Value;
+                string exitID = exit.Element("RoomID").Value.Trim();
+                string exitName = exit.Element("Name").Value.Trim();
+                string exitDirection = exit.Element("Direction").Value.Trim();
+                string exitDesc = exit.Element("Description").Value.Trim();
 
                 RoomExit roomExit = new RoomExit(exitID, exitName, exitDirection, exitDesc);
                 roomExits.Add(roomExit);
@@ -101,9 +101,9 @@ namespace TextAdventure
             //Iterate over the query for the results
             foreach (var item in itemQuery)
             {
-                string itemID = item.Element("ItemID").Value;
-                string itemName = item.Element("Name").Value;
-                string itemDesc = item.Element("Description").Value;
+                string itemID = item.Element("ItemID").Value.Trim();
+                string itemName = item.Element("Name").Value.Trim();
+                string itemDesc = item.Element("Description").Value.Trim();
 
                 RoomItem roomItem = new RoomItem(itemID, itemName, itemDesc);
                 roomItems.Add(roomItem);
@@ -114,10 +114,10 @@ namespace TextAdventure
 
         void LoadItemXml(XElement xmlItem)
         {
-            string itemID = xmlItem.Element("ID").Value;
-            string itemName = xmlItem.Element("Name").Value;
-            string itemType = xmlItem.Element("ItemType").Value;
-            string itemDesc = xmlItem.Element("Description").Value;
+            string itemID = xmlItem.Element("ID").Value.Trim();
+            string itemName = xmlItem.Element("Name").Value.Trim();
+            string itemType = xmlItem.Element("ItemType").Value.Trim();
+            string itemDesc = xmlItem.Element("Description").Value.Trim();
 
             Item newItem = new Item(itemID, itemName, itemType, itemDesc);
 

@@ -102,7 +102,8 @@ namespace TextAdventure
             if (Directory.Exists(path) == false)
             {
                 Console.WriteLine($"error - attempted to load xml files at invalid directory at {path}");
-                ErrorReporter.Instance.Report("Error - Attempted to load xml files at invalid directory");
+                ErrorReporter.Instance.Report($"Error - Attempted to load xml files at invalid directory at {path}");
+                Console.WriteLine("game may be in unstable state!");
                 return;
             }
 

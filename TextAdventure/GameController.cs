@@ -24,16 +24,21 @@ namespace TextAdventure
         static Dictionary<string, Item> itemDictionary = new Dictionary<string, Item>();
         //static Dictionary<int, Entity> entityDictionary;
 
+        static RoomNavagation roomNavagation;
+
         public static void StartGame(Mod modToPlay)
         {
             if (gameStarted)
             {
                 return;
             }
+            gameStarted = true;
             loadedMod = modToPlay;
 
             Console.Clear();
             Console.WriteLine(loadedMod.Title);
+            roomNavagation = new RoomNavagation(roomDictionary[loadedMod.StartRoomID], out string startRoomText);
+            ConsoleUtilities.WriteLineSlow(startRoomText);
 
             Run();
         }

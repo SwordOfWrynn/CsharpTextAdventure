@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Xml.Linq;
 
@@ -37,7 +38,7 @@ namespace TextAdventure
             string modName = xmlMod.Element("Name").Value;
             string modTitle = xmlMod.Element("Title").Value;
             string modStartRoomID = xmlMod.Element("StartRoomID").Value;
-            string modPath = path;
+            string modPath = Path.GetDirectoryName(path);
 
             return new Mod(modID, modName, modTitle, modStartRoomID, modPath);
         }
