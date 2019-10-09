@@ -5,7 +5,7 @@ using System.Xml.Linq;
 
 namespace TextAdventure
 {
-    struct Mod
+    public struct Mod
     {
         public readonly string ID;
         public readonly string Name;

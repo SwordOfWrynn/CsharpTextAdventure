@@ -12,40 +12,28 @@ namespace TextAdventure
     {
         const string XML_FILE_LOC = @"\xml";
 
+        static bool gameStarted;
+        static Mod loadedMod;
+
         public static int moves;
         public static int score;
 
         private static StringBuilder gameHistory = new StringBuilder();
-        #region title string
-        const string gameTitle = @"
-  ______              _____         
-  ___  / _______________  /_        
-  __  /  _  __ \_  ___/  __/        
-  _  /___/ /_/ /(__  )/ /_          
-  /_____/\____//____/ \__/          
-                                    
-  ________                          
-  ____  _/______                    
-   __  / __  __ \                   
-  __/ /  _  / / /                   
-  /___/  /_/ /_/                    
-                                    
-  ________                          
-  __  ___/_____________ ___________ 
-  _____ \___  __ \  __ `/  ___/  _ \
-  ____/ /__  /_/ / /_/ // /__ /  __/
-  /____/ _  .___/\__,_/ \___/ \___/ 
-         /_/                        ";
-        #endregion
 
         static Dictionary<string, Room> roomDictionary = new Dictionary<string, Room>();
         static Dictionary<string, Item> itemDictionary = new Dictionary<string, Item>();
         //static Dictionary<int, Entity> entityDictionary;
 
-        static void StartGame()
+        public static void StartGame(Mod modToPlay)
         {
+            if (gameStarted)
+            {
+                return;
+            }
+            loadedMod = modToPlay;
+
             Console.Clear();
-            Console.WriteLine(gameTitle);
+            Console.WriteLine(loadedMod.Title);
 
             Run();
         }
@@ -54,7 +42,7 @@ namespace TextAdventure
         {
             while (true)
             {
-                string consoleInput = ReadFromConsole();
+                string consoleInput = ConsoleUtilities.ReadFromConsole();
                 if (string.IsNullOrWhiteSpace(consoleInput))
                     continue;
                 try
@@ -95,14 +83,6 @@ namespace TextAdventure
             }
 
             score += num;
-        }
-
-        const string READ_PROMPT = "\n >";
-        public static string ReadFromConsole(string _promptMessage = " ")
-        {
-            //display a prompt, and read input
-            Console.Write(READ_PROMPT + _promptMessage);
-            return Console.ReadLine().ToLower();
         }
 
         public static void Restart()

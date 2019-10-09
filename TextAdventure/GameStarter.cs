@@ -20,12 +20,10 @@ namespace TextAdventure
 
             Console.WriteLine("\n[1] New Game \n");
             Console.WriteLine("[2] Load Game \n");
-            Console.WriteLine("[3] Exit Game \n");
-
-            Console.WriteLine("Choose an option...");
+            Console.WriteLine("[3] Exit Game");
 
             int choice;
-            while (int.TryParse(Console.ReadLine(), out choice) == false || (choice < 1 || choice > 3))
+            while (int.TryParse(ConsoleUtilities.ReadFromConsole("Choose an option: "), out choice) == false || (choice < 1 || choice > 3))
             {
                 Console.WriteLine("invalid input. type 1, 2 or 3 and hit enter");
             }
@@ -51,12 +49,22 @@ namespace TextAdventure
             {
                 modsDict.Add(i + 1, modsList[i]);
             }
+
+            foreach(var key in modsDict.Keys)
+            {
+                Console.WriteLine($"[{key}] {modsDict[key]}");
+            }
+
             int choice;
-            while(int.TryParse(Console.ReadLine(), out choice) == false || modsDict.ContainsKey(choice) == false)
+            while(int.TryParse(ConsoleUtilities.ReadFromConsole("choose a mod to play: "), out choice) == false || modsDict.ContainsKey(choice) == false)
             {
                 Console.WriteLine("invalid input. enter a valid choice number");
             }
-            Console.WriteLine($"Loading {modsList[choice - 1].Name}");
+            Mod chosenMod = modsList[choice - 1];
+            Console.WriteLine($"Loading {chosenMod.Name}");
+            LoadXmlFiles(chosenMod.Path);
+
+            GameController.StartGame(chosenMod);
         }
 
         static void LoadMods()
@@ -93,8 +101,9 @@ namespace TextAdventure
         {
             if (Directory.Exists(path) == false)
             {
-                Console.WriteLine("error - attempted to load xml files at invalid directory");
+                Console.WriteLine($"error - attempted to load xml files at invalid directory at {path}");
                 ErrorReporter.Instance.Report("Error - Attempted to load xml files at invalid directory");
+                return;
             }
 
             foreach (string file in Directory.EnumerateFiles(path, "*.xml"))
