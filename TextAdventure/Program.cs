@@ -36,7 +36,7 @@ namespace TextAdventure
             Console.WriteLine("App version {0}", Assembly.GetExecutingAssembly().GetName().Version.ToString());
             try
             {
-                GameController.PrepareGame();
+                GameStarter.PrepareGame();
             }
             catch(Exception ex)
             {

@@ -2,7 +2,7 @@
 <!-- A example Xml file for a Item -->
 <Item>
   <!-- ItemID 4 characters, type name e.g. Item, Wrench -> iwre
-  all IDs are turned into 8 character IDs ModID + Object ID  losp:iwre-->
+  all IDs are turned into 8 character IDs ModID + Object ID  ltsp:iwre-->
   <ID>iwre</ID>
   
   <Name>wrench</Name>

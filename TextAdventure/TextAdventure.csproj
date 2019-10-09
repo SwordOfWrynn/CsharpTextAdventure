@@ -16,6 +16,15 @@
     <None Update="xml\hangar.xml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
+    <None Update="xml\LostInSpace\Items\wrench.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="xml\LostInSpace\LostInSpace.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="xml\LostInSpace\Rooms\hangar.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="xml\wrench.xml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>

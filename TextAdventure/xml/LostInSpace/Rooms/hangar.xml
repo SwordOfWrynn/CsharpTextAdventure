@@ -2,7 +2,7 @@
  <!-- A example Xml file for a Room -->
 <Room>
   <!-- ID 4 characters, type name e.g. Room, Hangar -> rhan
-  all IDs are turned into 8 character IDs ModID + Object ID  losp:rhan-->
+  all IDs are turned into 8 character IDs ModID + Object ID  ltsp:rhan-->
   <ID>rhan</ID>
   
 	<Name>hangar</Name>

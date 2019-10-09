@@ -6,7 +6,7 @@ using System.Xml.Linq;
 
 namespace TextAdventure
 {
-    enum XmlType { Room, Item, Entity }
+    enum XmlType { Room, Item, Entity}
 
     class XmlObjectLoader
     {

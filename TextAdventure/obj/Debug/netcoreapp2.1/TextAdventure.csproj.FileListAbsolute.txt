@@ -30,3 +30,6 @@ D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\obj\Debug\netcor
 D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\obj\Debug\netcoreapp2.1\TextAdventure.AssemblyInfo.cs
 D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\obj\Debug\netcoreapp2.1\TextAdventure.dll
 D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\obj\Debug\netcoreapp2.1\TextAdventure.pdb
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Debug\netcoreapp2.1\xml\LostInSpace\Items\wrench.xml
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Debug\netcoreapp2.1\xml\LostInSpace\Rooms\hangar.xml
+D:\ComputerScience\C#Projects\CsharpTextAdventure\TextAdventure\bin\Debug\netcoreapp2.1\xml\LostInSpace\LostInSpace.xml
